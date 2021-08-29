@@ -21,4 +21,10 @@ class TextStyles {
     fontWeight: FontWeight.w500,
     color: AppColors.green,
   );
+
+  static final subtitleslider = GoogleFonts.inter(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    color: AppColors.gray,
+  );
 }

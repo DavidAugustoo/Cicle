@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:cicle/screens/login.dart';
+import 'package:cicle/screens/intro_slider.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key? key}) : super(key: key);
+  const Splash({Key key}) : super(key: key);
 
   @override
   _SplashState createState() => _SplashState();
@@ -19,7 +19,7 @@ class _SplashState extends State<Splash> {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Login(),
+            builder: (context) => IntroScreen(),
           ));
     });
   }
