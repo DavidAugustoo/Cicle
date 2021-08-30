@@ -1,6 +1,8 @@
 import 'package:cicle/screens/login.dart';
+import 'package:cicle/themes/colors.dart';
 import 'package:cicle/themes/text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
 
@@ -26,7 +28,11 @@ class _IntroScreen extends State<IntroScreen> {
         styleTitle: TextStyles.title,
         description:
             "Ajude a reduzir a pegada de carbono em nosso meio ambiente. Saiba o que, onde e como reciclar seus resíduos",
-        styleDescription: TextStyles.subtitleslider,
+        styleDescription: GoogleFonts.inter(
+          fontSize: 18,
+          fontWeight: FontWeight.w500,
+          color: AppColors.gray,
+        ),
         pathImage: "assets/Frame1.png",
         backgroundColor: Colors.white,
       ),

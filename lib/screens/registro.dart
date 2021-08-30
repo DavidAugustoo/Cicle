@@ -1,17 +1,18 @@
-import 'package:cicle/screens/registro.dart';
 import 'package:cicle/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key key}) : super(key: key);
+import 'login.dart';
+
+class Registro extends StatefulWidget {
+  const Registro({Key key}) : super(key: key);
 
   @override
-  _LoginState createState() => _LoginState();
+  _RegistroState createState() => _RegistroState();
 }
 
-class _LoginState extends State<Login> {
+class _RegistroState extends State<Registro> {
   @override
   Widget build(BuildContext context) {
     return Sizer(
@@ -69,6 +70,7 @@ class _LoginState extends State<Login> {
                         height: 2.h,
                       ),
                       TextField(
+                        maxLength: 12,
                         keyboardType: TextInputType.number,
                         obscureText: true,
                         style: GoogleFonts.inter(
@@ -89,22 +91,6 @@ class _LoginState extends State<Login> {
                         width: 2.w,
                         height: 2.h,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          TextButton(
-                            child: Text(
-                              'Esqueceu a senha?',
-                              style: GoogleFonts.inter(
-                                fontSize: 13.sp,
-                                fontWeight: FontWeight.w500,
-                                color: AppColors.gray,
-                              ),
-                            ),
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
                       SizedBox(
                         width: 2.w,
                         height: 2.h,
@@ -122,7 +108,7 @@ class _LoginState extends State<Login> {
                                   borderRadius: BorderRadius.circular(30.0),
                                 ),
                               )),
-                          child: Text('Login',
+                          child: Text('Cadastrar',
                               style: GoogleFonts.inter(
                                 fontSize: 13.sp,
                               )),
@@ -137,7 +123,7 @@ class _LoginState extends State<Login> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Não tem uma conta?",
+                            "Já tem uma conta?",
                             style: GoogleFonts.inter(
                               fontSize: 13.sp,
                               fontWeight: FontWeight.bold,
@@ -146,7 +132,7 @@ class _LoginState extends State<Login> {
                           ),
                           TextButton(
                             child: Text(
-                              'Cadastre-se',
+                              'Faça login',
                               style: GoogleFonts.inter(
                                 fontSize: 13.sp,
                                 fontWeight: FontWeight.bold,
@@ -157,7 +143,7 @@ class _LoginState extends State<Login> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Registro()),
+                                    builder: (context) => Login()),
                               );
                             },
                           ),
