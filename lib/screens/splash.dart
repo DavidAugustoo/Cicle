@@ -1,10 +1,11 @@
 import 'dart:async';
 
 import 'package:cicle/screens/intro_slider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key key}) : super(key: key);
+  const Splash({Key? key}) : super(key: key);
 
   @override
   _SplashState createState() => _SplashState();
@@ -26,6 +27,7 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
+    User? result = FirebaseAuth.instance.currentUser;
     return Scaffold(
       backgroundColor: Color(0xff1FCC79),
       body: Center(

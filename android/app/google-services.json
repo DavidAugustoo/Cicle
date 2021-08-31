@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1019761361536",
+    "project_id": "cicle-ccd15",
+    "storage_bucket": "cicle-ccd15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019761361536:android:53fa0a1fdcd582b2239c65",
+        "android_client_info": {
+          "package_name": "com.example.cicle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019761361536-fp59om7tdae2dp02hhiff1r352lketl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOo448AaS7Vpe063Nusa1VeOokyb4H2DU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019761361536-fp59om7tdae2dp02hhiff1r352lketl7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
