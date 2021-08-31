@@ -107,7 +107,9 @@ class _RegistroState extends State<Registro> {
                           ),
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return 'Digite uma e-mail valido';
+                              return 'Digite um e-mail';
+                            } else if (!value.contains('@')) {
+                              return 'Digite um endereço de e-mail válido';
                             }
                             return null;
                           },
@@ -136,7 +138,9 @@ class _RegistroState extends State<Registro> {
                           ),
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return 'Digite uma senha valida';
+                              return 'Enter Password';
+                            } else if (value.length < 6) {
+                              return 'A senha deve conter pelo menos 6 caracteres!';
                             }
                             return null;
                           },
@@ -174,6 +178,11 @@ class _RegistroState extends State<Registro> {
                                   isLoading = true;
                                 });
                                 registerToFb();
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Login()),
+                                );
                               }
                             },
                           ),
@@ -247,6 +256,8 @@ class _RegistroState extends State<Registro> {
               content: Text(err.message),
               actions: [
                 TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: AppColors.green, primary: Colors.white),
                   child: Text("Ok"),
                   onPressed: () {
                     Navigator.of(context).pop();
