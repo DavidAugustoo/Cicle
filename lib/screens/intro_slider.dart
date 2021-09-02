@@ -108,9 +108,9 @@ class _IntroScreen extends State<IntroScreen> {
       // renderSkipBtn: this.renderSkipBtn(),
       // skipButtonStyle: myButtonStyle(),
 
-      // // Next button
-      // renderNextBtn: this.renderNextBtn(),
-      // nextButtonStyle: myButtonStyle(),
+      // Next button
+      renderNextBtn: this.renderNextBtn(),
+      nextButtonStyle: myButtonStyle(),
 
       // Done button
       renderDoneBtn: this.renderDoneBtn(),

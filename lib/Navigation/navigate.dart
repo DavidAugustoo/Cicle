@@ -1,4 +1,4 @@
-import 'package:cicle/screens/HomePage.dart';
+import 'package:cicle/screens/HomePage/HomePage.dart';
 
 import 'package:cicle/screens/signin.dart';
 import 'package:flutter/material.dart';

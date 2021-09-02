@@ -1,4 +1,5 @@
-import 'package:cicle/screens/Home/profile.dart';
+import 'package:cicle/screens/HomePage/Home/artigos.dart';
+import 'package:cicle/screens/HomePage/Home/profile.dart';
 import 'package:cicle/services/firebase_service.dart';
 import 'package:cicle/themes/colors.dart';
 import 'package:cicle/utils/constants.dart';
@@ -26,10 +27,7 @@ class _HomePageState extends State<HomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    const tabhome(),
     Text(
       'Index 1: Business',
       style: optionStyle,
@@ -50,26 +48,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: AppColors.green,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.logout,
-              color: Colors.white,
-            ),
-            onPressed: () async {
-              FirebaseService service = new FirebaseService();
-              await service.signOutFromGoogle();
-              Navigator.pushReplacementNamed(context, Constants.signInNavigate);
-            },
-          )
-        ],
-        backwardsCompatibility: false,
-        systemOverlayStyle: SystemUiOverlayStyle(statusBarColor: Colors.blue),
-        title: Text("Home"),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
