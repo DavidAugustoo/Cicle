@@ -1,4 +1,4 @@
-import 'package:cicle/screens/login.dart';
+import 'package:cicle/screens/signin.dart';
 import 'package:cicle/themes/colors.dart';
 import 'package:cicle/themes/text_style.dart';
 import 'package:flutter/material.dart';
@@ -64,7 +64,7 @@ class _IntroScreen extends State<IntroScreen> {
   void onDonePress() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => Login()),
+      MaterialPageRoute(builder: (context) => SignIn()),
     );
   }
 
@@ -104,13 +104,13 @@ class _IntroScreen extends State<IntroScreen> {
       slides: this.slides,
       onDonePress: this.onDonePress,
 
-      // Skip button
-      renderSkipBtn: this.renderSkipBtn(),
-      skipButtonStyle: myButtonStyle(),
+      // // Skip button
+      // renderSkipBtn: this.renderSkipBtn(),
+      // skipButtonStyle: myButtonStyle(),
 
-      // Next button
-      renderNextBtn: this.renderNextBtn(),
-      nextButtonStyle: myButtonStyle(),
+      // // Next button
+      // renderNextBtn: this.renderNextBtn(),
+      // nextButtonStyle: myButtonStyle(),
 
       // Done button
       renderDoneBtn: this.renderDoneBtn(),
