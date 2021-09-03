@@ -1,11 +1,9 @@
-import 'package:cicle/screens/HomePage/Home/artigos.dart';
-import 'package:cicle/screens/HomePage/Home/profile.dart';
-import 'package:cicle/services/firebase_service.dart';
+import 'package:cicle/screens/HomePage/Contato/contato.dart';
+import 'package:cicle/screens/HomePage/Home/tabs.dart';
+import 'package:cicle/screens/HomePage/Perfil/profile.dart';
 import 'package:cicle/themes/colors.dart';
-import 'package:cicle/utils/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,16 +25,13 @@ class _HomePageState extends State<HomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    const tabhome(),
+    const Tabhome(),
     Text(
       'Index 1: Business',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    profile(),
+    Contato(),
+    Profile(),
   ];
 
   void _onItemTapped(int index) {
@@ -63,7 +58,7 @@ class _HomePageState extends State<HomePage> {
             label: 'Vender',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.phone),
+            icon: Icon(Icons.email),
             label: 'Contato',
           ),
           BottomNavigationBarItem(
@@ -76,9 +71,5 @@ class _HomePageState extends State<HomePage> {
         onTap: _onItemTapped,
       ),
     );
-  }
-
-  void icone() {
-    SvgPicture.asset('./assets/Navigation/Home.svg');
   }
 }

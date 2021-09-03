@@ -1,24 +1,24 @@
-import 'dart:async';
-
+import 'package:cicle/screens/HomePage/Home/Artigos/card.dart';
+import 'package:cicle/screens/HomePage/Home/Guias/guias.dart';
 import 'package:cicle/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
-class tabhome extends StatefulWidget {
-  const tabhome({Key? key}) : super(key: key);
+class Tabhome extends StatefulWidget {
+  const Tabhome({Key? key}) : super(key: key);
 
   @override
-  _tabhomeState createState() => _tabhomeState();
+  _TabhomeState createState() => _TabhomeState();
 }
 
-class _tabhomeState extends State<tabhome> {
+class _TabhomeState extends State<Tabhome> {
   var artigos = GoogleFonts.inter();
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
       return DefaultTabController(
-        initialIndex: 1,
+        initialIndex: 0,
         length: 3,
         child: Scaffold(
           appBar: AppBar(
@@ -57,17 +57,13 @@ class _tabhomeState extends State<tabhome> {
               ],
             ),
           ),
-          body: const TabBarView(
+          body: TabBarView(
             children: <Widget>[
-              Center(
-                child: Text("It's cloudy here"),
-              ),
-              Center(
-                child: Text("It's rainy here"),
-              ),
+              Cards(),
               Center(
                 child: Text("It's sunny here"),
               ),
+              Guias(),
             ],
           ),
         ),
