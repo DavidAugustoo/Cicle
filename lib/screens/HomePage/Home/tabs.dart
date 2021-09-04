@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
+import 'Teste/quiz_page.dart';
+import 'Teste/quizhome.dart';
+
 class Tabhome extends StatefulWidget {
   const Tabhome({Key? key}) : super(key: key);
 
@@ -60,9 +63,7 @@ class _TabhomeState extends State<Tabhome> {
           body: TabBarView(
             children: <Widget>[
               Cards(),
-              Center(
-                child: Text("It's sunny here"),
-              ),
+              QuizHome(),
               Guias(),
             ],
           ),

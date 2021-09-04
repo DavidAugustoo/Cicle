@@ -102,7 +102,7 @@ class _GuiasState extends State<Guias> {
                                                           snapshot
                                                               .data!.docs[index]
                                                               .data()["url"],
-                                                          fit: BoxFit.cover,
+                                                          fit: BoxFit.none,
                                                         ),
                                                       ),
                                                       Padding(
