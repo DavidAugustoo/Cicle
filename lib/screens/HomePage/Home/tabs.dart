@@ -25,6 +25,7 @@ class _TabhomeState extends State<Tabhome> {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            elevation: 0,
             backgroundColor: Colors.white,
             bottom: TabBar(
               indicatorColor: AppColors.green,

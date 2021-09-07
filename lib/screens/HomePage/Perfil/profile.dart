@@ -1,3 +1,4 @@
+import 'package:cicle/screens/HomePage/Vender/pedidos.dart';
 import 'package:cicle/services/firebase_service.dart';
 import 'package:cicle/themes/colors.dart';
 import 'package:cicle/utils/constants.dart';
@@ -20,27 +21,36 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
       return Scaffold(
-        appBar: AppBar(
-          title: Text('Perfil'),
-          elevation: 0,
-          centerTitle: true,
-          backgroundColor: AppColors.green,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.logout,
-                color: Colors.white,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(10.h),
+          child: AppBar(
+            title: Text('Perfil'),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+                bottom: Radius.circular(15),
               ),
-              onPressed: () async {
-                FirebaseService service = new FirebaseService();
-                await service.signOutFromGoogle();
-                Navigator.pushReplacementNamed(
-                    context, Constants.signInNavigate);
-              },
-            )
-          ],
-          backwardsCompatibility: false,
-          systemOverlayStyle: SystemUiOverlayStyle(statusBarColor: Colors.blue),
+            ),
+            elevation: 0,
+            centerTitle: true,
+            backgroundColor: AppColors.green,
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                ),
+                onPressed: () async {
+                  FirebaseService service = new FirebaseService();
+                  await service.signOutFromGoogle();
+                  Navigator.pushReplacementNamed(
+                      context, Constants.signInNavigate);
+                },
+              )
+            ],
+            backwardsCompatibility: false,
+            systemOverlayStyle:
+                SystemUiOverlayStyle(statusBarColor: Colors.blue),
+          ),
         ),
         body: Column(
           children: [
@@ -92,6 +102,29 @@ class _ProfileState extends State<Profile> {
                 ),
               ),
             ),
+            Expanded(child: Container()),
+            SizedBox(
+              width: 90.w,
+              height: 8.h,
+              child: ElevatedButton(
+                child: Text('Meus Pedidos'),
+                style: ElevatedButton.styleFrom(
+                  primary: AppColors.green,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15), // <-- Radius
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pedidos()),
+                  );
+                },
+              ),
+            ),
+            SizedBox(
+              height: 3.h,
+            )
           ],
         ),
       );

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "1019761361536",
+    "firebase_url": "https://cicle-ccd15-default-rtdb.firebaseio.com",
     "project_id": "cicle-ccd15",
     "storage_bucket": "cicle-ccd15.appspot.com"
   },
@@ -37,6 +38,13 @@
             {
               "client_id": "1019761361536-fp59om7tdae2dp02hhiff1r352lketl7.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1019761361536-3qtbb10spvs4rng36nb6fvv97ef9utq7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cicle"
+              }
             }
           ]
         }

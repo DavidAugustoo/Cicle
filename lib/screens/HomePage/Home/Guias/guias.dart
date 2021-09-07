@@ -1,7 +1,10 @@
+import 'package:cicle/screens/HomePage/HomePage.dart';
 import 'package:cicle/themes/colors.dart';
+import 'package:cicle/utils/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:sizer/sizer.dart';
 
 class Guias extends StatefulWidget {
@@ -89,126 +92,55 @@ class _GuiasState extends State<Guias> {
                                             Animation animation,
                                             Animation secondaryAnimation) {
                                           return Scaffold(
-                                            body: Container(
-                                              color: Colors.white,
-                                              child: Column(
-                                                children: [
-                                                  Stack(
-                                                    children: [
-                                                      Container(
-                                                        height: 40.h,
-                                                        width: 100.w,
-                                                        child: Image.network(
-                                                          snapshot
-                                                              .data!.docs[index]
-                                                              .data()["url"],
-                                                          fit: BoxFit.none,
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding: EdgeInsets
-                                                            .symmetric(
-                                                                vertical: 5.h,
-                                                                horizontal:
-                                                                    3.h),
-                                                        child: Container(
-                                                          decoration: BoxDecoration(
-                                                              color: AppColors
-                                                                  .green,
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          10)),
-                                                          child: IconButton(
-                                                            iconSize: 8.w,
-                                                            onPressed: () {
-                                                              Navigator.pop(
-                                                                  context);
-                                                            },
-                                                            icon: Icon(
-                                                              Icons.arrow_back,
-                                                              color:
-                                                                  Colors.white,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      )
-                                                    ],
-                                                  ),
-                                                  Expanded(
-                                                    child: Container(
-                                                      height: 100.h,
-                                                      padding:
-                                                          EdgeInsets.symmetric(
-                                                              vertical: 0.h,
-                                                              horizontal: 3.h),
-                                                      child:
-                                                          SingleChildScrollView(
-                                                        child: Column(
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            SizedBox(
-                                                              height: 4.h,
-                                                            ),
-                                                            Center(
-                                                              child: Container(
-                                                                height: 2.h,
-                                                                width: 20.w,
-                                                                decoration: BoxDecoration(
-                                                                    color: Color(
-                                                                        0xffD0DBEA),
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            10)),
-                                                              ),
-                                                            ),
-                                                            SizedBox(
-                                                              height: 3.h,
-                                                            ),
-                                                            Text(
-                                                              snapshot.data!
-                                                                  .docs[index]
-                                                                  .data()["name"],
-                                                              style: GoogleFonts
-                                                                  .inter(
-                                                                fontSize: 16.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                color: AppColors
-                                                                    .gray,
-                                                              ),
-                                                            ),
-                                                            SizedBox(
-                                                              height: 5.h,
-                                                            ),
-                                                            Text(
-                                                              snapshot.data!
-                                                                      .docs[index]
-                                                                      .data()[
-                                                                  "texto"],
-                                                              style: GoogleFonts
-                                                                  .inter(
-                                                                fontSize: 13.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                                color: AppColors
-                                                                    .gray,
-                                                              ),
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .justify,
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
+                                            body: CustomScrollView(
+                                              slivers: [
+                                                SliverAppBar(
+                                                  backgroundColor:
+                                                      AppColors.green,
+                                                  expandedHeight: 250,
+                                                  pinned: true,
+                                                  flexibleSpace:
+                                                      FlexibleSpaceBar(
+                                                    centerTitle: true,
+                                                    title: Text(
+                                                      snapshot.data!.docs[index]
+                                                          .data()["name"],
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                                SliverFillRemaining(
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                            vertical: 0.h,
+                                                            horizontal: 5.h),
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        SizedBox(height: 5.h),
+                                                        Text(
+                                                          snapshot
+                                                              .data!.docs[index]
+                                                              .data()["texto"],
+                                                          style:
+                                                              GoogleFonts.inter(
+                                                            fontSize: 13.sp,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                            color:
+                                                                AppColors.gray,
+                                                          ),
+                                                          textAlign:
+                                                              TextAlign.justify,
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           );
                                         });

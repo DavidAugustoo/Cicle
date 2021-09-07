@@ -58,11 +58,11 @@ class _QuizHomeState extends State<QuizHome> {
                 height: 3.h,
               ),
               Container(
-                width: 50.w,
+                width: 90.w,
                 height: 10.h,
                 child: ElevatedButton(
                   child: Text(
-                    'Inciar',
+                    'Iniciar',
                     style: GoogleFonts.inter(
                       fontSize: 15.sp,
                       fontWeight: FontWeight.w500,

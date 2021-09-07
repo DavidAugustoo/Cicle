@@ -65,18 +65,6 @@ class FinishDialog {
           actions: [
             TextButton(
               child: Text(
-                'JOGAR NOVAMENTE',
-                style: TextStyle(color: AppColors.green),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => QuizPage()),
-                );
-              },
-            ),
-            TextButton(
-              child: Text(
                 'SAIR',
                 style: TextStyle(color: AppColors.green),
               ),

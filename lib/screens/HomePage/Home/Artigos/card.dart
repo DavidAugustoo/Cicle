@@ -86,126 +86,69 @@ class _CardsState extends State<Cards> {
                                             Animation animation,
                                             Animation secondaryAnimation) {
                                           return Scaffold(
-                                            body: Container(
-                                              color: Colors.white,
-                                              child: Column(
-                                                children: [
-                                                  Stack(
-                                                    children: [
-                                                      Container(
-                                                        height: 40.h,
-                                                        width: 100.w,
-                                                        child: Image.network(
-                                                          snapshot
-                                                              .data!.docs[index]
-                                                              .data()["url"],
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding: EdgeInsets
-                                                            .symmetric(
-                                                                vertical: 5.h,
-                                                                horizontal:
-                                                                    3.h),
-                                                        child: Container(
-                                                          decoration: BoxDecoration(
-                                                              color: AppColors
-                                                                  .green,
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          10)),
-                                                          child: IconButton(
-                                                            iconSize: 8.w,
-                                                            onPressed: () {
-                                                              Navigator.pop(
-                                                                  context);
-                                                            },
-                                                            icon: Icon(
-                                                              Icons.arrow_back,
-                                                              color:
-                                                                  Colors.white,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      )
-                                                    ],
-                                                  ),
-                                                  Expanded(
-                                                    child: Container(
-                                                      height: 100.h,
-                                                      padding:
-                                                          EdgeInsets.symmetric(
-                                                              vertical: 0.h,
-                                                              horizontal: 3.h),
-                                                      child:
-                                                          SingleChildScrollView(
-                                                        child: Column(
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            SizedBox(
-                                                              height: 4.h,
-                                                            ),
-                                                            Center(
-                                                              child: Container(
-                                                                height: 2.h,
-                                                                width: 20.w,
-                                                                decoration: BoxDecoration(
-                                                                    color: Color(
-                                                                        0xffD0DBEA),
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            10)),
-                                                              ),
-                                                            ),
-                                                            SizedBox(
-                                                              height: 3.h,
-                                                            ),
-                                                            Text(
-                                                              snapshot.data!
-                                                                  .docs[index]
-                                                                  .data()["name"],
-                                                              style: GoogleFonts
-                                                                  .inter(
-                                                                fontSize: 16.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                color: AppColors
-                                                                    .gray,
-                                                              ),
-                                                            ),
-                                                            SizedBox(
-                                                              height: 5.h,
-                                                            ),
-                                                            Text(
-                                                              snapshot.data!
-                                                                      .docs[index]
-                                                                      .data()[
-                                                                  "texto"],
-                                                              style: GoogleFonts
-                                                                  .inter(
-                                                                fontSize: 13.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                                color: AppColors
-                                                                    .gray,
-                                                              ),
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .justify,
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
+                                            body: CustomScrollView(
+                                              slivers: [
+                                                SliverAppBar(
+                                                  pinned: true,
+                                                  backgroundColor:
+                                                      AppColors.green,
+                                                  expandedHeight: 50.h,
+                                                  flexibleSpace:
+                                                      FlexibleSpaceBar(
+                                                    background: Image.network(
+                                                      snapshot.data!.docs[index]
+                                                          .data()["url"],
+                                                      fit: BoxFit.cover,
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                                SliverFillRemaining(
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                            vertical: 0.h,
+                                                            horizontal: 5.h),
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        SizedBox(height: 5.h),
+                                                        Text(
+                                                          snapshot
+                                                              .data!.docs[index]
+                                                              .data()["name"],
+                                                          style:
+                                                              GoogleFonts.inter(
+                                                            fontSize: 15.sp,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            color:
+                                                                AppColors.gray,
+                                                          ),
+                                                        ),
+                                                        SizedBox(height: 3.h),
+                                                        Text(
+                                                          snapshot
+                                                              .data!.docs[index]
+                                                              .data()["texto"],
+                                                          style:
+                                                              GoogleFonts.inter(
+                                                            fontSize: 13.sp,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                            color:
+                                                                AppColors.gray,
+                                                          ),
+                                                          textAlign:
+                                                              TextAlign.justify,
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           );
                                         });

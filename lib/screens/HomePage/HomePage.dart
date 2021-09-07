@@ -1,6 +1,7 @@
 import 'package:cicle/screens/HomePage/Contato/contato.dart';
 import 'package:cicle/screens/HomePage/Home/tabs.dart';
 import 'package:cicle/screens/HomePage/Perfil/profile.dart';
+import 'package:cicle/screens/HomePage/Vender/vender.dart';
 import 'package:cicle/themes/colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -25,10 +26,7 @@ class _HomePageState extends State<HomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     const Tabhome(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    Vender(),
     Contato(),
     Profile(),
   ];
@@ -57,7 +55,7 @@ class _HomePageState extends State<HomePage> {
             label: 'Vender',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.email),
+            icon: Icon(Icons.mail),
             label: 'Contato',
           ),
           BottomNavigationBarItem(

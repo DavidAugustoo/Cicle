@@ -5,6 +5,7 @@ import 'package:cicle/components/result_dialog.dart';
 import 'package:cicle/screens/HomePage/Home/Teste/controllers/quiz_controller.dart';
 import 'package:cicle/themes/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 import 'models/questions.dart';
 
@@ -65,15 +66,19 @@ class _QuizPageState extends State<QuizPage> {
         icon: Icons.warning,
       );
 
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        _buildQuestion(_controller.getQuestion()),
-        _buildAnswerButton(_controller.getAnswer1()),
-        _buildAnswerButton(_controller.getAnswer2()),
-        _buildScoreKeeper(),
-      ],
+    return Sizer(
+      builder: (context, orientation, deviceType) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            _buildQuestion(_controller.getQuestion()),
+            _buildAnswerButton(_controller.getAnswer1()),
+            _buildAnswerButton(_controller.getAnswer2()),
+            _buildScoreKeeper(),
+          ],
+        );
+      },
     );
   }
 
