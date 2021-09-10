@@ -1,4 +1,6 @@
+import 'package:cicle/screens/HomePage/Vender/pedidos.dart';
 import 'package:cicle/themes/colors.dart';
+import 'package:cicle/utils/database.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -15,14 +17,12 @@ class Vender extends StatefulWidget {
 
 class _VenderState extends State<Vender> {
   final FirebaseFirestore fb = FirebaseFirestore.instance;
-  bool isLoading = false;
   bool isRetrieved = false;
-  final _formKey = GlobalKey<FormState>();
+  final _addItemFormKey = GlobalKey<FormState>();
   final estados = ["9:00 - 10:00", "15:00 - 16:00", "19:00 - 20:00"];
   String? dropdownValue = '9:00 - 10:00';
   final quantidadeController = TextEditingController();
   final enderecoController = TextEditingController();
-  final dbRef = FirebaseDatabase.instance.reference().child("pedidos");
   QuerySnapshot<Map<String, dynamic>>? cachedResult;
   User? user = FirebaseAuth.instance.currentUser;
 
@@ -154,7 +154,7 @@ class _VenderState extends State<Vender> {
                                                             vertical: 5.h,
                                                             horizontal: 3.h),
                                                     child: Form(
-                                                      key: _formKey,
+                                                      key: _addItemFormKey,
                                                       child:
                                                           SingleChildScrollView(
                                                         child: Column(
@@ -344,56 +344,68 @@ class _VenderState extends State<Vender> {
                                                               },
                                                             ),
                                                             SizedBox(
-                                                              height: 3.h,
+                                                              height: 4.h,
                                                             ),
-                                                            ElevatedButton(
-                                                              onPressed: () {
-                                                                if (_formKey
-                                                                    .currentState!
-                                                                    .validate()) {
-                                                                  dbRef.push().set({
+                                                            SizedBox(
+                                                              width: 90.w,
+                                                              height: 8.h,
+                                                              child:
+                                                                  ElevatedButton(
+                                                                child: Text(
+                                                                    'Cadastrar Pedido'),
+                                                                style: ElevatedButton
+                                                                    .styleFrom(
+                                                                  primary:
+                                                                      AppColors
+                                                                          .green,
+                                                                  shape:
+                                                                      RoundedRectangleBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            15), // <-- Radius
+                                                                  ),
+                                                                ),
+                                                                onPressed: () {
+                                                                  fb
+                                                                      .collection(
+                                                                          "pedidos")
+                                                                      .add({
                                                                     "quantidade":
                                                                         quantidadeController
                                                                             .text,
-                                                                    "endereco":
-                                                                        enderecoController
-                                                                            .text,
-                                                                    "horario":
-                                                                        dropdownValue,
+                                                                    "nome": user!
+                                                                        .displayName!,
                                                                     "material": snapshot
                                                                         .data!
                                                                         .docs[
                                                                             index]
                                                                         .data()["name"],
-                                                                    "user": user!
-                                                                        .email!,
                                                                     "url": snapshot
                                                                         .data!
                                                                         .docs[
                                                                             index]
                                                                         .data()["url"],
-                                                                  }).then((_) {
-                                                                    ScaffoldMessenger.of(
-                                                                            context)
-                                                                        .showSnackBar(SnackBar(
-                                                                            content:
-                                                                                Text('Successfully Added')));
-                                                                    enderecoController
-                                                                        .clear();
-                                                                    quantidadeController
-                                                                        .clear();
-                                                                  }).catchError(
-                                                                      (onError) {
-                                                                    ScaffoldMessenger.of(
-                                                                            context)
-                                                                        .showSnackBar(SnackBar(
-                                                                            content:
-                                                                                Text(onError)));
+                                                                    "email": user!
+                                                                        .email!,
+                                                                    "endereco":
+                                                                        enderecoController
+                                                                            .text,
+                                                                    "horario":
+                                                                        dropdownValue,
+                                                                  }).then((value) {
+                                                                    print(value
+                                                                        .id);
                                                                   });
-                                                                }
-                                                              },
-                                                              child: Text(
-                                                                  'Submit'),
+                                                                  Navigator
+                                                                      .push(
+                                                                    context,
+                                                                    MaterialPageRoute(
+                                                                        builder:
+                                                                            (context) =>
+                                                                                Pedidos()),
+                                                                  );
+                                                                },
+                                                              ),
                                                             ),
                                                           ],
                                                         ),
@@ -424,6 +436,12 @@ class _VenderState extends State<Vender> {
   Future<QuerySnapshot<Map<String, dynamic>>> getImages() {
     return fb.collection("guias").get();
   }
+
+  AlertDialog alert = AlertDialog(
+    title: Text("AlertDialog"),
+    content: Text("Deseja continuar aprendendo Flutter ?"),
+    actions: [Text('Teste')],
+  );
 
   ListView displayCachedList() {
     return ListView.builder(

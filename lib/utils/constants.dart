@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 class Constants {
   static const signInNavigate = '/sign-in';
   static const homeNavigate = '/home';
+  static const pedidosNavigate = '/pedidos';
   static const kPrimaryColor = Color(0xFFFFFFFF);
   static const kGreyColor = Color(0xFFEEEEEE);
   static const kBlackColor = Color(0xFF000000);
