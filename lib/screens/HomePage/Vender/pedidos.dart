@@ -88,6 +88,14 @@ class _PedidosState extends State<Pedidos> {
                                       ),
                                       Text(
                                         snapshot.data!.docs[index]
+                                            .data()["valor"],
+                                        style: GoogleFonts.inter(),
+                                      ),
+                                      SizedBox(
+                                        height: 0.5.h,
+                                      ),
+                                      Text(
+                                        snapshot.data!.docs[index]
                                             .data()["horario"],
                                         style: GoogleFonts.inter(),
                                       ),

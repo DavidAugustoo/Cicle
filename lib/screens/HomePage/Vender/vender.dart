@@ -23,6 +23,7 @@ class _VenderState extends State<Vender> {
   String? dropdownValue = '9:00 - 10:00';
   final quantidadeController = TextEditingController();
   final enderecoController = TextEditingController();
+  final valorController = TextEditingController();
   QuerySnapshot<Map<String, dynamic>>? cachedResult;
   User? user = FirebaseAuth.instance.currentUser;
 
@@ -175,7 +176,7 @@ class _VenderState extends State<Vender> {
                                                               height: 1.h,
                                                             ),
                                                             Text(
-                                                              'Digite quanto de material você deseja vender',
+                                                              'Digite quanto de material você possui',
                                                               style: GoogleFonts
                                                                   .inter(
                                                                 fontSize: 12.sp,
@@ -213,6 +214,150 @@ class _VenderState extends State<Vender> {
                                                                 }
                                                                 return null;
                                                               },
+                                                              onChanged:
+                                                                  (value) {
+                                                                var valor =
+                                                                    value;
+                                                                var resultado;
+
+                                                                if (snapshot
+                                                                        .data!
+                                                                        .docs[
+                                                                            index]
+                                                                        .data()["name"] ==
+                                                                    'Plástico') {
+                                                                  resultado =
+                                                                      double.parse(
+                                                                              valor) *
+                                                                          0.80;
+
+                                                                  valorController
+                                                                          .text =
+                                                                      "R\$ " +
+                                                                          resultado
+                                                                              .toStringAsFixed(1);
+                                                                  ;
+                                                                } else if (snapshot
+                                                                        .data!
+                                                                        .docs[
+                                                                            index]
+                                                                        .data()["name"] ==
+                                                                    'Bateria') {
+                                                                  resultado =
+                                                                      double.parse(
+                                                                              valor) *
+                                                                          0.40;
+
+                                                                  valorController
+                                                                          .text =
+                                                                      "R\$ " +
+                                                                          resultado
+                                                                              .toStringAsFixed(1);
+                                                                } else if (snapshot
+                                                                        .data!
+                                                                        .docs[
+                                                                            index]
+                                                                        .data()["name"] ==
+                                                                    'Metal') {
+                                                                  resultado =
+                                                                      double.parse(
+                                                                              valor) *
+                                                                          4.50;
+
+                                                                  valorController
+                                                                          .text =
+                                                                      "R\$ " +
+                                                                          resultado
+                                                                              .toStringAsFixed(1);
+                                                                  ;
+                                                                } else if (snapshot
+                                                                        .data!
+                                                                        .docs[
+                                                                            index]
+                                                                        .data()["name"] ==
+                                                                    'Papel') {
+                                                                  resultado =
+                                                                      double.parse(
+                                                                              valor) *
+                                                                          4.50;
+
+                                                                  valorController
+                                                                          .text =
+                                                                      "R\$ " +
+                                                                          resultado
+                                                                              .toStringAsFixed(1);
+                                                                  ;
+                                                                } else if (snapshot
+                                                                        .data!
+                                                                        .docs[
+                                                                            index]
+                                                                        .data()["name"] ==
+                                                                    'Vidro') {
+                                                                  resultado =
+                                                                      double.parse(
+                                                                              valor) *
+                                                                          0.37;
+
+                                                                  valorController
+                                                                          .text =
+                                                                      "R\$ " +
+                                                                          resultado
+                                                                              .toStringAsFixed(1);
+                                                                  ;
+                                                                } else if (snapshot
+                                                                        .data!
+                                                                        .docs[
+                                                                            index]
+                                                                        .data()["name"] ==
+                                                                    'Orgânico') {
+                                                                  resultado =
+                                                                      double.parse(
+                                                                              valor) *
+                                                                          0.37;
+
+                                                                  valorController
+                                                                          .text =
+                                                                      "R\$ " +
+                                                                          resultado
+                                                                              .toStringAsFixed(1);
+                                                                  ;
+                                                                }
+                                                                print(
+                                                                    '$resultado');
+                                                              },
+                                                            ),
+                                                            SizedBox(
+                                                              height: 3.h,
+                                                            ),
+                                                            Text(
+                                                              'Valor estimado em reais',
+                                                              style: GoogleFonts
+                                                                  .inter(
+                                                                fontSize: 12.sp,
+                                                                color: AppColors
+                                                                    .gray,
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              height: 3.h,
+                                                            ),
+                                                            TextFormField(
+                                                              readOnly: true,
+                                                              controller:
+                                                                  valorController,
+                                                              keyboardType:
+                                                                  TextInputType
+                                                                      .number,
+                                                              decoration:
+                                                                  InputDecoration(
+                                                                enabledBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              10.0),
+                                                                ),
+                                                              ),
                                                             ),
                                                             SizedBox(
                                                               height: 3.h,
@@ -392,6 +537,9 @@ class _VenderState extends State<Vender> {
                                                                             .text,
                                                                     "horario":
                                                                         dropdownValue,
+                                                                    "valor":
+                                                                        valorController
+                                                                            .text
                                                                   }).then((value) {
                                                                     print(value
                                                                         .id);
