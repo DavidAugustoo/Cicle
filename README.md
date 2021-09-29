@@ -10,13 +10,17 @@
 
 > Cicle é uma startup que permite vender materiais reciclados com facilidade, descartando aquilo que não se é usado por um preço justo.
 
+ 
+### Ajustes e melhorias
+
+O layout da aplicação está disponível no Figma:
+
 <a  href="https://www.figma.com/file/yDjoNKatZiGCO3JS8961VJ/Cicle-App-Design?node-id=1%3A1726">
 
 <img  alt="Made by tgmarinho"  src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 
 </a>
- 
-### Ajustes e melhorias
+
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
