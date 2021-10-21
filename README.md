@@ -26,8 +26,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [x] SignIn for Google
 - [x] Crud 
-- [x] Quiz
-- [ ] API ViaCep
+- [x] API Quiz
 
 ## 💻 Pré-requisitos
 
