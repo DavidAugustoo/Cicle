@@ -18,21 +18,13 @@ Cicle é uma startup que permite vender materiais reciclados com facilidade, des
 </p>
 
 
-## Tecnologias :rocket: 
+## Tecnologias 🚀 
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Flutter
 - Firebase
 - Dart
-
----
-
-## Sumário 🛰
-
-- [Sobre 📖](#sobre-)
-- [Instalação 👷‍♂️](#instalação-%EF%B8%8F)
-- [Funcionalidades 🛠✨](#funcionalidades-)
 
 ---
 
