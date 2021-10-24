@@ -14,7 +14,7 @@ Cicle é uma startup que permite vender materiais reciclados com facilidade, des
 
 </p>
 <p align="center">
-<img src="assets/Cell.gif" align="center" />
+<img src="assets/cell.gif" align="center" />
 </p>
 
 
