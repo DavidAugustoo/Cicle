@@ -1,43 +1,78 @@
-# Cicle
-
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
+<h1 align="center"> Cicle</h1>
 
 
-<img src="./assets/app.gif" alt="Gif do app">
+<p align="center">
+  <a href="#tecnologias-">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#sobre-">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#layout-">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#instalação-">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#funcionalidades-">Funcionalidades</a>
+</p>
+<p align="center"> 
+Cicle é uma startup que permite vender materiais reciclados com facilidade, descartando aquilo que não se é usado por um preço justo.
+
+
+</p>
+<p align="center">
+<img src="assets/Cell.gif" align="center" />
+</p>
+
+
+## Tecnologias :rocket: 
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- Flutter
+- Firebase
+- Dart
+
+---
+
+## Sumário 🛰
+
+- [Sobre 📖](#sobre-)
+- [Instalação 👷‍♂️](#instalação-%EF%B8%8F)
+- [Funcionalidades 🛠✨](#funcionalidades-)
+
+---
+
+## Sobre 📖
 
 
 
+### Descrição
+A Cicle é um projeto de startup de impacto positivo que, através do aplicativo, permite pessoas venderem seu lixo doméstico e ainda gerarem um renda extra com isso. Esses resíduos são transformados em máteria-prima, que são aproveitadas no processo produtivo de outras empresas, trazendo economia de recursos como água, energia, matérias-primas retiradas da natureza e, ainda, estimula a destinação correta dos resíduos, minimizando impactos ambientais.
 
-> Cicle é uma startup que permite vender materiais reciclados com facilidade, descartando aquilo que não se é usado por um preço justo.
+Esse é o aplicativo mobile desenvolvido com React Native, em javascript. Você pode encontrar o backend criado com node.js e typescript [aqui](https://github.com/Stardust-Cruzaders/Imora-Backend)
 
- 
-### Ajustes e melhorias
+### Objetivo
+O projeto foi desenvolvido como trabalho de conclusão de curso do 3º Ano do ensino médio integrado ao técnico na FIAP School. 
 
-O layout da aplicação está disponível no Figma:
+### O que eu aprendi 👨‍🏫
 
-<a  href="https://www.figma.com/file/yDjoNKatZiGCO3JS8961VJ/Cicle-App-Design?node-id=1%3A1726">
+- JavaScript em prática.
+- Usar elementos de UI e design com FlexBox.
+- Implementação de sistemas de navegação.
+- Implementar funcionalidade de seleção de fotos da galeria.
+- 
+---
 
-<img  alt="Made by tgmarinho"  src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+##  Layout 🔖
 
-</a>
+Nos links abaixo você encontra o layout do projeto:
+
+- [Layout](https://www.figma.com/file/yDjoNKatZiGCO3JS8961VJ/Cicle-App-Design?node-id=1%3A1726)
+
+---
+
+## Instalação 💻
 
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+Antes de começar, verifique se você atende aos seguintes requisitos:
 
-- [x] SignIn for Google
-- [x] Crud 
-- [x] API Quiz
+- Versão mais recente do Flutter
 
-## 💻 Pré-requisitos
-
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
-<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
-* Você instalou a versão mais recente do `Flutter`
-
-## 🤔 Como usar 
-
-Para instalar o aplicativo, siga estas etapas:
-
+ Para instalar o aplicativo, siga estas etapas:
 
 
 ```
@@ -53,7 +88,17 @@ $ flutter packages get
 - Run the app: 
 $ flutter run
 ```
+---
 
+## Funcionalidades 🛠✨
+
+- Autenticação por conta Google.
+- CRUD completo de artigos.
+- CRUD completo de pedidos.
+- Quiz sobre reciclagem.
+- Envio de e-mail para o suporte direto do aplicativo.
+
+---
 
 ## 📫 Como contribuir
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
@@ -66,7 +111,5 @@ Para contribuir com Cicle, siga estas etapas:
 5. Crie a solicitação de pull.
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
----
 
 Feito com ♥ by [David Augusto](https://github.com/DavidAugustoo)
