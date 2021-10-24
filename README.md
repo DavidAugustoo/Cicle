@@ -44,7 +44,6 @@ No link abaixo você encontra o layout do projeto:
 
 - [Layout](https://www.figma.com/file/yDjoNKatZiGCO3JS8961VJ/Cicle-App-Design?node-id=1%3A1726)
 
----
 
 ## Instalação 💻
 
@@ -79,7 +78,6 @@ $ flutter run
 - Quiz sobre reciclagem.
 - Envio de e-mail para o suporte direto do aplicativo.
 
----
 
 ## 📫 Como contribuir
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
