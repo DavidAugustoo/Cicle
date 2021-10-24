@@ -26,10 +26,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Firebase
 - Dart
 
----
 
 ## Sobre 📖
-
 
 
 ### Descrição
@@ -40,18 +38,9 @@ Esse é o aplicativo mobile desenvolvido com React Native, em javascript. Você 
 ### Objetivo
 O projeto foi desenvolvido como trabalho de conclusão de curso do 3º Ano do ensino médio integrado ao técnico na FIAP School. 
 
-### O que eu aprendi 👨‍🏫
-
-- JavaScript em prática.
-- Usar elementos de UI e design com FlexBox.
-- Implementação de sistemas de navegação.
-- Implementar funcionalidade de seleção de fotos da galeria.
-- 
----
-
 ##  Layout 🔖
 
-Nos links abaixo você encontra o layout do projeto:
+No link abaixo você encontra o layout do projeto:
 
 - [Layout](https://www.figma.com/file/yDjoNKatZiGCO3JS8961VJ/Cicle-App-Design?node-id=1%3A1726)
 
