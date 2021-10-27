@@ -35,7 +35,7 @@ A Cicle é um projeto de startup de impacto positivo que, através do aplicativo
 
 
 ### Objetivo
-O projeto foi desenvolvido como trabalho de conclusão de curso do 3º Ano do ensino médio integrado ao técnico na FIAP School. 
+O MVP do projeto foi desenvolvido como trabalho de conclusão de curso do 3º Ano do ensino médio integrado ao técnico na FIAP School. 
 
 ##  Layout 🔖
 
