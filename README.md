@@ -31,7 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 
 ### Descrição
-A Cicle é um projeto de startup de impacto positivo que, através do aplicativo, permite pessoas venderem seu lixo doméstico e ainda gerarem um renda extra com isso. Esses resíduos são transformados em máteria-prima, que são aproveitadas no processo produtivo de outras empresas, trazendo economia de recursos como água, energia, matérias-primas retiradas da natureza e, ainda, estimula a destinação correta dos resíduos, minimizando impactos ambientais.
+A Cicle é um projeto de startup de impacto positivo que, através do aplicativo, permite pessoas venderem seu lixo doméstico e ainda gerarem um renda extra com isso. Esses resíduos são transformados em máteria-prima e são aproveitadas no processo produtivo de outras empresas, trazendo economia de recursos como: água, energia, matérias-primas retiradas da natureza e, ainda, estimula a destinação correta dos resíduos, minimizando impactos ambientais.
 
 
 ### Objetivo
