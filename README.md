@@ -1,4 +1,4 @@
-<h1 align="center"> Cicle</h1>
+<h1 align="center"> MediCenter</h1>
 
 
 <p align="center">
@@ -9,12 +9,12 @@
   <a href="#funcionalidades-">Funcionalidades</a>
 </p>
 <p align="center"> 
-Cicle é uma startup que permite vender materiais reciclados com facilidade, descartando aquilo que não se é usado por um preço justo.
+Landing page
 
 
 </p>
 <p align="center">
-<img src="assets/cell.gif" align="center" />
+<img src="assets/desktop.gif" align="center" />
 </p>
 
 
@@ -22,59 +22,19 @@ Cicle é uma startup que permite vender materiais reciclados com facilidade, des
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- Flutter
-- Firebase
-- Dart
+- HTML
+- CSS
 
 
 ## Sobre 📖
 
 
 ### Descrição
-A Cicle é um projeto de startup de impacto positivo que, através do aplicativo, permite pessoas venderem seu lixo doméstico e ainda gerarem um renda extra com isso. Esses resíduos são transformados em máteria-prima e são aproveitadas no processo produtivo de outras empresas, trazendo economia de recursos como: água, energia, matérias-primas retiradas da natureza e, ainda, estimula a destinação correta dos resíduos, minimizando impactos ambientais.
-
+Landing page de uma clínica médica.
 
 ### Objetivo
-O MVP do projeto foi desenvolvido como trabalho de conclusão de curso do 3º Ano do ensino médio integrado ao técnico na FIAP School. 
+Projeto desenvolvido para treinar conceitos de importantes sobre HTML e CSS durante o curso B7web.
 
-##  Layout 🔖
-
-No link abaixo você encontra o layout do projeto:
-
-- [Layout](https://www.figma.com/file/yDjoNKatZiGCO3JS8961VJ/Cicle-App-Design?node-id=1%3A1726)
-
-
-## Instalação 💻
-
-
-Antes de começar, verifique se você atende aos seguintes requisitos:
-
-- Versão mais recente do Flutter
-
- Para instalar o aplicativo, siga estas etapas:
-
-
-```
-- Clone this repository:
-$ git clone https://github.com/DavidAugustoo/Cicle
-
-- Enter in directory:
-$ cd Cicle
-
-- For install dependencies:
-$ flutter packages get
-
-- Run the app: 
-$ flutter run
-```
-
-## Funcionalidades 🛠✨
-
-- Autenticação por conta Google.
-- CRUD completo de artigos.
-- CRUD completo de pedidos.
-- Quiz sobre reciclagem.
-- Envio de e-mail para o suporte direto do aplicativo.
 
 
 ## 📫 Como contribuir
