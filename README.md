@@ -18,7 +18,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Flutter
 - Firebase
 - Dart
-- 
+
 ## Sobre 📖
 
 
